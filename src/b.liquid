@@ -4,7 +4,7 @@ permalink: /breaches/
 ---
 
 <ul>
-{% for breach in collections.all %}
-  {% if breach.data.breach.Name %}<li><a href="{{ breach.url | url }}">{{ breach.data.breach.Name }}</a></li>{% endif %}
+{% for breach in collections.breach %}
+  <li><a href="{{ breach.url | url }}">{{ breach.data.breach.Name }}</a></li>
 {% endfor %}
 </ul>
