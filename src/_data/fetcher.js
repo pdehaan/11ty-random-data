@@ -4,9 +4,11 @@ const axios = require("axios");
 const { stripIndents } = require("common-tags");
 const fse = require("fs-extra");
 
+const MAX_BREACHES = 10;
+
 module.exports = async () => {
   const res = await axios.get("https://haveibeenpwned.com/api/v3/breaches");
-  const breaches = res.data.slice(0, 10);
+  const breaches = res.data.slice(0, MAX_BREACHES);
 
   for (const breach of breaches) {
     const outFile = path.join(__dirname, "..", "breaches", `${breach.Name}.liquid`);
@@ -25,7 +27,8 @@ module.exports = async () => {
         ${breach.Description}
       </section>
     `;
+    // Write template out to disk...
     await fse.writeFile(outFile, template);
   }
-  return [];
+  return breaches;
 };
