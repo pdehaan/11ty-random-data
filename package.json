@@ -1,16 +1,12 @@
 {
   "name": "11ty-random-data",
+  "description": "Building an 11ty site from dynamically fetched data (and dynamically generated templates).",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "eleventy",
-    "postbuild": "prettier www --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
-  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-random-data/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "axios": "^0.21.1",
@@ -18,5 +14,18 @@
     "del": "^6.0.0",
     "fs-extra": "^9.0.1",
     "prettier": "^2.2.1"
+  },
+  "homepage": "https://github.com/pdehaan/11ty-random-data#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-random-data.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "postbuild": "prettier www --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
