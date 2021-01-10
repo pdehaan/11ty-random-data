@@ -10,9 +10,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "axios": "^0.21.1",
-    "common-tags": "^1.8.0",
     "del": "^6.0.0",
-    "fs-extra": "^9.0.1",
     "prettier": "^2.2.1"
   },
   "homepage": "https://github.com/pdehaan/11ty-random-data#readme",
@@ -25,7 +23,7 @@
   },
   "scripts": {
     "build": "eleventy",
-    "postbuild": "prettier www --write",
+    "postbuild": "prettier www --write --loglevel=silent",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

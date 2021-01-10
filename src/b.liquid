@@ -1,0 +1,10 @@
+---
+title: breaches
+permalink: /breaches/
+---
+
+<ul>
+{% for breach in collections.breach %}
+  <li><a href="{{ breach.url | url }}">{{ breach.data.breach.Name }}</a></li>
+{% endfor %}
+</ul>

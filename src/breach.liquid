@@ -1,0 +1,29 @@
+---
+pagination:
+  data: fetcher
+  size: 1
+  alias: breach
+  addAllPagesToCollections: true
+layout: layouts/breach.liquid
+permalink: "breaches/{{ breach.Name | slug }}/"
+eleventyComputed:
+  title: "{{ breach.Title }}"
+  name: "{{ breach.Name }}"
+  domain: "{{ breach.Domain }}"
+  breachDate: "{{ breach.BreachDate }}"
+  addedDate: "{{ breach.AddedDate }}"
+  modifiedDate: "{{ breach.ModifiedDate }}"
+  pwnCount: "{{ breach.PwnCount }}"
+tags:
+  - breach
+---
+
+<section>
+  <h1>{{ title }}</h1>
+  <dl>
+    <dt>Pwn Count:</dt>
+    <dd>{{ pwnCount }}</dd>
+  </dl>
+
+  {{ breach.Description }}
+</section>
